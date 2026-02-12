@@ -23,14 +23,8 @@ An application that generates anki flashcards using AI from study materials and 
 
 ## Installation
 
-1. **Clone or download this repository**:
+1. **Install dependencies**:
 ```bash
-git clone
-```
-
-2. **Install dependencies**:
-```bash
-cd
 pip install -r requirements.txt
 ```
 
