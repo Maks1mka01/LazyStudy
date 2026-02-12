@@ -1,32 +1,36 @@
-# AI Flashcards - Spaced Repetition Learning App
+# LazyStudy
 
-A Python Flask application that generates AI-powered flashcards from study materials and uses spaced repetition (SM-2 algorithm) with text-to-speech for hands-free studying. Perfect for ADHD learners and multitaskers!
+An application that generates anki flashcards using AI from study materials and uses spaced repetition technique with text-to-speech for studying without any effort. It's perfect for people who don't want to try to study, but also want to prepare for exams or assignment's defense
 
 ## Features
 
-- **AI-Powered Card Generation**: Generate flashcards from PDFs or text using free AI APIs (OpenRouter, Groq, Together AI)
-- **Text-to-Speech**: Hands-free studying with automatic TTS playback
-- **Spaced Repetition**: SM-2 algorithm (like Anki) for optimal learning
+- **AI Card Generation**: Generate flashcards from PDFs or text using free AI APIs (OpenRouter, Groq, Together AI)
+- **TTS**: Effortless studying with automatic TTS playback
+- **Spaced Repetition**: SM-2 algorithm for optimal learning
 - **Global Hotkeys**: Rate cards using keyboard shortcuts
+- **Statistics**: Statistics of your study progress displayed through graphics
 - **Multiple Decks**: Organize flashcards by topic
 - **Editable Cards**: Edit generated cards before studying
 - **Local Storage**: All data stored on your device with SQLite
 
-## Prerequisites
+## Requirements
 
 - Python 3.8 or higher
-- An API key from one of these providers (all have free tiers):
-  - [Groq](https://console.groq.com) - Fast and free
-  - [OpenRouter](https://openrouter.ai) - Multiple models
-  - [Together AI](https://api.together.xyz) - Open source models
+- An API key from one of these providers:
+  - [Groq](https://console.groq.com)
+  - [OpenRouter](https://openrouter.ai) 
+  - [Together AI](https://api.together.xyz) 
 
 ## Installation
 
-1. **Clone or download this repository**
+1. **Clone or download this repository**:
+```bash
+git clone
+```
 
 2. **Install dependencies**:
 ```bash
-cd anki_ai_app
+cd
 pip install -r requirements.txt
 ```
 
@@ -35,188 +39,93 @@ pip install -r requirements.txt
 python app.py
 ```
 
-4. **Open your browser** and go to:
+4. **Open this link in browser**:
 ```
 http://localhost:5000
 ```
 
 ## Setup Guide
 
-### 1. Configure API Settings
+### 1. Get API Key
 
-1. Click **Settings** in the navigation menu
-2. Choose your AI provider (Groq recommended for beginners)
-3. Enter your API key
-4. Configure hotkeys (default: Ctrl+1/2/3/4)
-5. Click **Save Settings**
+1. Navigate to the one AI provider website
+2. Sign up
+3. Find and navigate to API Keys
+4. Click "**New API Key**" button
+5. Name it and click continue
+6. Copy your prepared API key
 
-### 2. Create Your First Deck
+### 2. Configure Settings
 
-1. Click **New Deck** or **Create Deck**
-2. Enter a deck name (e.g., "Biology Chapter 5")
+1. Navigate to settings menu
+2. Copy and paste API key for your provider
+3. Configure hotkeys (Default: ctrl+1, ctrl+2, ctrl+3, ctrl+4)
+4. Click **Save Settings**
+
+### 3. Create Your First Deck
+
+1. Click **Create Deck** or **Create New Deck**
+2. Enter a deck name
 3. Click **Create Deck**
 
-### 3. Generate Flashcards
+### 4. Generate Flashcards
 
 1. Open your deck
 2. Choose number of cards to generate
-3. Either:
-   - Upload a PDF file, OR
-   - Paste study material text
+3. Paste either PDF file or text of study material:
 4. Click **Generate Flashcards**
-5. Wait for AI to create cards (usually 10-30 seconds)
+5. In case of error click **Generate Flashcards** again
 
-### 4. Edit Cards (Optional)
+### 5. Edit Cards
 
-- Review generated cards
-- Click **Edit** to modify question/answer
-- Click **Delete** to remove unwanted cards
+- This section contains all generated cards
+- Click **Edit** to modify question or answer
+- Click **Delete** to remove unnecessary cards
 
-### 5. Study Session
+### 6. Study Session
 
-1. Click **Study Now** on a deck with due cards
-2. The app will automatically:
+1. Click **Study** on a deck with generated cards
+2. Then the app will:
    - Read the question
-   - Pause for 10 seconds (think time)
+   - Pause for 10 seconds
    - Read the answer
 3. Rate your answer:
-   - **Again** (Ctrl+1): Forgot completely - card resets
-   - **Hard** (Ctrl+2): Difficult to remember
+   - **Again** (Ctrl+1): If you don't know the answer
+   - **Hard** (Ctrl+2): Understood the question but still can't answer
    - **Good** (Ctrl+3): Remembered correctly
-   - **Easy** (Ctrl+4): Very easy - longer interval
-4. Next card plays automatically!
+   - **Easy** (Ctrl+4): If you easily answered the question
+4. Next card plays
+
+### 7. Statistics
+
+1. Click **Statistics** button on top right corner
+2. Review your study progress
 
 ### Study Controls
 
-- **Play Card**: Start/restart current card audio
 - **Pause**: Pause during thinking time
-- **Speak Again**: Repeat current card immediately
+- **Resume**: Resume to continue studying 
+- **Speak Again**: Repeat audio for a current card
 - **End Session**: Stop studying and return to deck
 
 ## How It Works
 
 ### Spaced Repetition (SM-2 Algorithm)
 
-The app uses the same algorithm as Anki:
+This algorithm is the same one used in Anki:
 
 - **New cards**: Reviewed after 1 day
 - **Good rating**: Intervals increase (1 day → 6 days → ~2 weeks → ~1 month, etc.)
 - **Easy rating**: 30% longer intervals
 - **Hard/Again**: Shorter intervals or restart
 
-### Hotkeys
-
-**Note**: On Windows/Linux, you may need to run as administrator for global hotkeys to work.
-
-Default hotkeys:
-- `Ctrl+1` - Again
-- `Ctrl+2` - Hard
-- `Ctrl+3` - Good
-- `Ctrl+4` - Easy
-
-You can customize these in Settings.
-
-## Tips for Best Results
-
-### AI Card Generation
-
-1. **Provide clear, structured text**: Textbook excerpts work better than random notes
-2. **Optimal length**: 500-2000 words per generation
-3. **Specify card count**: 10-20 cards for a page, 30-50 for a chapter
-4. **Review before studying**: AI sometimes creates imperfect cards - edit them!
-
-### Studying
-
-1. **Study regularly**: Do reviews daily for best retention
-2. **Use hotkeys**: Much faster than clicking buttons
-3. **Be honest**: Rating cards accurately improves the algorithm
-4. **Multitask-friendly**: Study while doing chores, exercising, etc.
-
-## Troubleshooting
-
-### "API Error" when generating cards
-
-- Check your API key is correct
-- Ensure you have credits/quota remaining
-- Try a different provider
-
-### Hotkeys not working
-
-- **Windows/Linux**: Run as administrator
-- **macOS**: Grant accessibility permissions
-- Try simpler hotkeys (e.g., `F1`, `F2`, `F3`, `F4`)
-
-### TTS not speaking
-
-- Check your system audio is working
-- Try adjusting volume in system settings
-- Some systems may need additional TTS engines installed
-
-### No cards due to study
-
-- This means you've reviewed all cards!
-- Wait until cards become due again
-- Or generate more cards for the deck
-
-## File Structure
-
-```
-anki_ai_app/
-├── app.py                  # Flask application
-├── database.py             # SQLite operations
-├── ai_generator.py         # AI API calls
-├── tts_player.py          # Text-to-speech
-├── spaced_repetition.py   # SM-2 algorithm
-├── hotkeys.py             # Global hotkey listener
-├── templates/             # HTML templates
-├── static/                # CSS styles
-├── flashcards.db          # SQLite database (created on first run)
-└── requirements.txt       # Python dependencies
-```
+For more information about algorithm used, check separate page "SM-2 Algorithm" in our app.
 
 ## API Provider Comparison
 
-| Provider | Speed | Free Tier | Best For |
-|----------|-------|-----------|----------|
-| **Groq** | Very Fast | Generous | Quick generation, recommended for beginners |
-| **OpenRouter** | Medium | Multiple free models | Flexibility, trying different models |
-| **Together AI** | Medium | Good limits | Open source models |
-
-## Privacy & Security
-
-- All data stored **locally** on your device
-- API keys stored in local SQLite database
-- Study material never stored by AI providers (only sent for processing)
-- No telemetry or tracking
-
-## Known Limitations
-
-- Hotkeys require administrator/elevated privileges on some systems
-- TTS voice quality depends on your system's TTS engine
-- AI-generated cards may need editing for accuracy
-- Large PDFs (>50 pages) may hit API token limits
-
-## Future Improvements (Optional)
-
-Ideas for extending the project:
-- [ ] Import/export decks (JSON format)
-- [ ] Statistics dashboard
-- [ ] Image support in flashcards
-- [ ] Custom TTS voices
-- [ ] Mobile responsive design
-- [ ] Batch card editing
-
+- Groq (**Recommended for beginnders**)
+- OpenRouter (**Has different models**)
+- Together AI (**Option if nothing works**)
 ## License
 
 Free to use for educational purposes. Modify as needed for your Python project!
-
-## Credits
-
-- Built with Flask, SQLite, and Python
-- Uses pyttsx3 for TTS
-- Implements SuperMemo SM-2 algorithm
-- AI providers: Groq, OpenRouter, Together AI
-
----
-
-**Happy Learning!**
