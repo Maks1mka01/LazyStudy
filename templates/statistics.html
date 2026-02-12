@@ -1,0 +1,385 @@
+{% extends "base.html" %}
+
+{% block title %}Statistics - AI Flashcards{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>Study Statistics & Analytics</h2>
+</div>
+
+<div class="stats-overview">
+    <div class="stat-card">
+        <h3>{{ stats.total_cards }}</h3>
+        <p>Total Cards</p>
+    </div>
+    <div class="stat-card">
+        <h3>{{ stats.studied_cards }}</h3>
+        <p>Cards Studied</p>
+    </div>
+    <div class="stat-card">
+        <h3>{{ stats.due_cards }}</h3>
+        <p>Due Today</p>
+    </div>
+    <div class="stat-card">
+        <h3>{{ stats.total_reviews }}</h3>
+        <p>Total Reviews</p>
+    </div>
+    <div class="stat-card">
+        <h3>{{ stats.retention_rate }}%</h3>
+        <p>Retention Rate</p>
+    </div>
+    <div class="stat-card">
+        <h3>{{ stats.avg_easiness }}</h3>
+        <p>Avg Easiness</p>
+    </div>
+</div>
+
+<div class="charts-section">
+    <div class="chart-container-full">
+        <h3>Overall Study Status</h3>
+        <img src="data:image/png;base64,{{ charts.summary }}" alt="Overall Summary Chart">
+    </div>
+
+    <div class="chart-container-full">
+        <h3>Deck Progress</h3>
+        <img src="data:image/png;base64,{{ charts.deck_progress }}" alt="Deck Progress Chart">
+    </div>
+
+    <div class="chart-container">
+        <h3>Card Distribution by Interval</h3>
+        <img src="data:image/png;base64,{{ charts.interval_dist }}" alt="Interval Distribution">
+    </div>
+
+    <div class="chart-container">
+        <h3>Difficulty Distribution</h3>
+        <img src="data:image/png;base64,{{ charts.difficulty_dist }}" alt="Difficulty Distribution">
+    </div>
+
+    <div class="chart-container-full">
+        <h3>Upcoming Reviews Forecast</h3>
+        <img src="data:image/png;base64,{{ charts.upcoming }}" alt="Upcoming Reviews">
+    </div>
+
+    <div class="chart-container-full">
+        <h3>Retention Metrics</h3>
+        <img src="data:image/png;base64,{{ charts.retention }}" alt="Retention Metrics">
+        <div class="metrics-info">
+            <p><strong>1st Review Retention:</strong> How many cards you remembered after first study</p>
+            <p><strong>2nd Review Retention:</strong> Cards remembered after second review</p>
+            <p><strong>Mature Card Rate:</strong> Cards successfully reviewed 3+ times</p>
+        </div>
+    </div>
+</div>
+
+<div class="numpy-section">
+    <h3>Advanced Numerical Analysis (NumPy)</h3>
+    
+    <div class="numpy-grid">
+        <div class="numpy-card">
+            <h4>Easiness Factor Statistics</h4>
+            <table class="stats-table">
+                <tr>
+                    <td>Mean (μ):</td>
+                    <td>{{ numerical_stats.ef_mean }}</td>
+                </tr>
+                <tr>
+                    <td>Std Dev (σ):</td>
+                    <td>{{ numerical_stats.ef_std }}</td>
+                </tr>
+                <tr>
+                    <td>Median:</td>
+                    <td>{{ numerical_stats.ef_median }}</td>
+                </tr>
+                <tr>
+                    <td>25th Percentile:</td>
+                    <td>{{ numerical_stats.ef_25th }}</td>
+                </tr>
+                <tr>
+                    <td>75th Percentile:</td>
+                    <td>{{ numerical_stats.ef_75th }}</td>
+                </tr>
+            </table>
+            <p class="explanation">
+                <strong>NumPy Operations:</strong> np.mean(), np.std(), np.median(), np.percentile()
+            </p>
+        </div>
+        
+        <div class="numpy-card">
+            <h4>Interval Statistics</h4>
+            <table class="stats-table">
+                <tr>
+                    <td>Mean Interval:</td>
+                    <td>{{ numerical_stats.interval_mean }} days</td>
+                </tr>
+                <tr>
+                    <td>Std Dev:</td>
+                    <td>{{ numerical_stats.interval_std }} days</td>
+                </tr>
+                <tr>
+                    <td>Mean Reviews:</td>
+                    <td>{{ numerical_stats.reps_mean }}</td>
+                </tr>
+            </table>
+            <p class="explanation">
+                <strong>NumPy Operations:</strong> np.mean(), np.std()
+            </p>
+        </div>
+        
+        <div class="numpy-card">
+            <h4>Correlation Matrix</h4>
+            <table class="stats-table">
+                <tr>
+                    <td>EF ↔ Interval:</td>
+                    <td>{{ correlations.ef_interval }}</td>
+                </tr>
+                <tr>
+                    <td>EF ↔ Reps:</td>
+                    <td>{{ correlations.ef_reps }}</td>
+                </tr>
+                <tr>
+                    <td>Interval ↔ Reps:</td>
+                    <td>{{ correlations.interval_reps }}</td>
+                </tr>
+            </table>
+            <p class="explanation">
+                <strong>NumPy Operation:</strong> np.corrcoef() - Pearson correlation coefficients
+            </p>
+        </div>
+    </div>
+</div>
+
+<style>
+.numpy-section {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    color: white;
+}
+
+.numpy-section h3 {
+    color: white;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.numpy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.numpy-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.numpy-card h4 {
+    color: white;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 0.5rem;
+}
+
+.stats-table {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.stats-table td {
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stats-table td:first-child {
+    font-weight: bold;
+}
+
+.explanation {
+    font-size: 0.85rem;
+    font-style: italic;
+    opacity: 0.9;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+</style>
+
+<div class="insights-section">
+    <h3>💡 Study Insights</h3>
+    <div class="insight-cards">
+        {% if stats.retention_rate >= 70 %}
+        <div class="insight good">
+            <span class="icon">✅</span>
+            <p>Great retention rate! Your spaced repetition is working well.</p>
+        </div>
+        {% elif stats.retention_rate >= 40 %}
+        <div class="insight medium">
+            <span class="icon">📈</span>
+            <p>Good progress! Keep studying regularly to improve retention.</p>
+        </div>
+        {% else %}
+        <div class="insight warning">
+            <span class="icon">⚠️</span>
+            <p>Consider studying more regularly for better retention.</p>
+        </div>
+        {% endif %}
+
+        {% if stats.due_cards > 20 %}
+        <div class="insight warning">
+            <span class="icon">📚</span>
+            <p>You have {{ stats.due_cards }} cards due. Consider a study session soon!</p>
+        </div>
+        {% elif stats.due_cards > 0 %}
+        <div class="insight good">
+            <span class="icon">🎯</span>
+            <p>{{ stats.due_cards }} cards due - perfect for a quick study session.</p>
+        </div>
+        {% else %}
+        <div class="insight good">
+            <span class="icon">🎉</span>
+            <p>All caught up! No cards due right now.</p>
+        </div>
+        {% endif %}
+
+        {% if retention_metrics.mature_cards >= 10 %}
+        <div class="insight good">
+            <span class="icon">🏆</span>
+            <p>{{ retention_metrics.mature_cards }} mature cards! You're building solid knowledge.</p>
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+<style>
+.stats-overview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-card h3 {
+    font-size: 2rem;
+    color: #3498db;
+    margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.charts-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.chart-container, .chart-container-full {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.chart-container-full {
+    grid-column: 1 / -1;
+}
+
+.chart-container h3, .chart-container-full h3 {
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.chart-container img, .chart-container-full img {
+    width: 100%;
+    height: auto;
+}
+
+.metrics-info {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.metrics-info p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.insights-section {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.insights-section h3 {
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.insight-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.insight {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid;
+}
+
+.insight.good {
+    background: #d4edda;
+    border-color: #28a745;
+}
+
+.insight.medium {
+    background: #fff3cd;
+    border-color: #ffc107;
+}
+
+.insight.warning {
+    background: #f8d7da;
+    border-color: #dc3545;
+}
+
+.insight .icon {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+.insight p {
+    margin: 0;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .charts-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats-overview {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+</style>
+{% endblock %}

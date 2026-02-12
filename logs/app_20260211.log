@@ -1,0 +1,521 @@
+2026-02-11 13:42:04 - flashcards_app - INFO - ============================================================
+2026-02-11 13:42:04 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 13:42:04 - flashcards_app - INFO - ============================================================
+2026-02-11 13:47:23 - flashcards_app - INFO - ============================================================
+2026-02-11 13:47:23 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 13:47:23 - flashcards_app - INFO - ============================================================
+2026-02-11 13:47:24 - flashcards_app - INFO - ============================================================
+2026-02-11 13:47:24 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 13:47:24 - flashcards_app - INFO - ============================================================
+2026-02-11 14:17:02 - flashcards_app - INFO - ============================================================
+2026-02-11 14:17:02 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 14:17:02 - flashcards_app - INFO - ============================================================
+2026-02-11 14:53:40 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-11 15:08:03 - flashcards_app - INFO - ============================================================
+2026-02-11 15:08:03 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 15:08:03 - flashcards_app - INFO - ============================================================
+2026-02-11 15:09:11 - flashcards_app - INFO - ============================================================
+2026-02-11 15:09:11 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 15:09:11 - flashcards_app - INFO - ============================================================
+2026-02-11 15:09:19 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-11 15:15:06 - flashcards_app - INFO - ============================================================
+2026-02-11 15:15:06 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 15:15:06 - flashcards_app - INFO - ============================================================
+2026-02-11 15:15:08 - flashcards_app - INFO - ============================================================
+2026-02-11 15:15:08 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 15:15:08 - flashcards_app - INFO - ============================================================
+2026-02-11 15:31:10 - flashcards_app - INFO - ============================================================
+2026-02-11 15:31:10 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 15:31:10 - flashcards_app - INFO - ============================================================
+2026-02-11 15:31:12 - flashcards_app - INFO - ============================================================
+2026-02-11 15:31:12 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 15:31:12 - flashcards_app - INFO - ============================================================
+2026-02-11 15:33:34 - flashcards_app - INFO - ============================================================
+2026-02-11 15:33:34 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 15:33:34 - flashcards_app - INFO - ============================================================
+2026-02-11 15:41:41 - flashcards_app - INFO - ============================================================
+2026-02-11 15:41:41 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 15:41:41 - flashcards_app - INFO - ============================================================
+2026-02-11 15:41:43 - flashcards_app - INFO - ============================================================
+2026-02-11 15:41:43 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 15:41:43 - flashcards_app - INFO - ============================================================
+2026-02-11 15:42:28 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-11 15:43:12 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-11 15:43:16 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-11 15:43:19 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-11 16:27:18 - flashcards_app - INFO - ============================================================
+2026-02-11 16:27:18 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 16:27:18 - flashcards_app - INFO - ============================================================
+2026-02-11 16:27:21 - flashcards_app - INFO - ============================================================
+2026-02-11 16:27:21 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 16:27:21 - flashcards_app - INFO - ============================================================
+2026-02-11 16:28:01 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 3, Cards: 6
+2026-02-11 16:38:50 - flashcards_app - DEBUG - CARD_RATED - Card ID: 25, Rating: again
+2026-02-11 16:38:53 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 3, Cards: 5
+2026-02-11 16:42:01 - flashcards_app - DEBUG - CARD_RATED - Card ID: 26, Rating: good
+2026-02-11 16:42:17 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 3, Cards: 4
+2026-02-11 16:42:21 - flashcards_app - DEBUG - CARD_RATED - Card ID: 27, Rating: hard
+2026-02-11 16:42:31 - flashcards_app - DEBUG - CARD_RATED - Card ID: 28, Rating: again
+2026-02-11 16:42:37 - flashcards_app - DEBUG - CARD_RATED - Card ID: 29, Rating: hard
+2026-02-11 16:42:40 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 3, Cards: 1
+2026-02-11 16:47:27 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 3, Cards: 1
+2026-02-11 16:47:32 - flashcards_app - DEBUG - CARD_RATED - Card ID: 30, Rating: good
+2026-02-11 16:47:32 - flashcards_app - INFO - STUDY_SESSION_COMPLETED - Deck ID: 3, Reviewed: 1
+2026-02-11 16:47:32 - flashcards_app - INFO - STUDY_SESSION_COMPLETED - Deck ID: None, Reviewed: 0
+2026-02-11 16:47:44 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 2, Cards: 7
+2026-02-11 16:47:51 - flashcards_app - DEBUG - CARD_RATED - Card ID: 14, Rating: hard
+2026-02-11 16:48:06 - flashcards_app - DEBUG - CARD_RATED - Card ID: 15, Rating: hard
+2026-02-11 16:48:11 - flashcards_app - DEBUG - CARD_RATED - Card ID: 16, Rating: hard
+2026-02-11 16:48:28 - flashcards_app - DEBUG - CARD_RATED - Card ID: 17, Rating: again
+2026-02-11 16:48:31 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 2, Cards: 3
+2026-02-11 16:48:39 - flashcards_app - DEBUG - CARD_RATED - Card ID: 18, Rating: hard
+2026-02-11 17:22:30 - flashcards_app - INFO - ============================================================
+2026-02-11 17:22:30 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 17:22:30 - flashcards_app - INFO - ============================================================
+2026-02-11 17:23:06 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 2, Cards: 2
+2026-02-11 17:23:28 - flashcards_app - DEBUG - CARD_RATED - Card ID: 19, Rating: again
+2026-02-11 17:23:28 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 2, Cards: 1
+2026-02-11 17:23:43 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 2, Cards: 1
+2026-02-11 17:23:46 - flashcards_app - DEBUG - CARD_RATED - Card ID: 20, Rating: again
+2026-02-11 17:26:54 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-11 17:27:45 - flashcards_app - INFO - CARDS_GENERATED - Deck ID: 2, Count: 10, Provider: groq
+2026-02-11 17:28:05 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 2, Cards: 10
+2026-02-11 17:28:25 - flashcards_app - DEBUG - CARD_RATED - Card ID: 31, Rating: again
+2026-02-11 17:28:25 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 2, Cards: 9
+2026-02-11 17:29:26 - flashcards_app - DEBUG - CARD_RATED - Card ID: 32, Rating: good
+2026-02-11 19:42:43 - flashcards_app - INFO - DECK_CREATED - Name: 1, ID: 4
+2026-02-11 19:45:32 - flashcards_app - INFO - ============================================================
+2026-02-11 19:45:32 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 19:45:32 - flashcards_app - INFO - ============================================================
+2026-02-11 22:33:38 - flashcards_app - INFO - ============================================================
+2026-02-11 22:33:38 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 22:33:38 - flashcards_app - INFO - ============================================================
+2026-02-11 22:33:40 - flashcards_app - INFO - ============================================================
+2026-02-11 22:33:40 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 22:33:40 - flashcards_app - INFO - ============================================================
+2026-02-11 22:34:02 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 22:34:09 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 22:34:28 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 22:36:55 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 22:37:24 - flashcards_app - INFO - ============================================================
+2026-02-11 22:37:24 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 22:37:24 - flashcards_app - INFO - ============================================================
+2026-02-11 22:37:28 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 22:37:30 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 22:37:30 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 22:40:08 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 22:40:09 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 22:40:09 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 22:40:09 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 22:40:10 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 22:40:33 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 22:40:37 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 22:43:11 - flashcards_app - INFO - ============================================================
+2026-02-11 22:43:11 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 22:43:11 - flashcards_app - INFO - ============================================================
+2026-02-11 22:43:15 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 22:43:17 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 22:43:18 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 22:43:18 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 22:43:18 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 22:43:18 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 22:43:18 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 22:43:30 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 22:43:54 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 22:44:02 - flashcards_app - INFO - ============================================================
+2026-02-11 22:44:02 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 22:44:02 - flashcards_app - INFO - ============================================================
+2026-02-11 22:44:04 - flashcards_app - INFO - ============================================================
+2026-02-11 22:44:04 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 22:44:04 - flashcards_app - INFO - ============================================================
+2026-02-11 22:44:10 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 22:45:51 - flashcards_app - INFO - ============================================================
+2026-02-11 22:45:51 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 22:45:51 - flashcards_app - INFO - ============================================================
+2026-02-11 22:45:53 - flashcards_app - INFO - ============================================================
+2026-02-11 22:45:53 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 22:45:53 - flashcards_app - INFO - ============================================================
+2026-02-11 22:45:57 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 22:45:58 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 22:46:02 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 22:46:04 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 23:00:08 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 23:01:12 - flashcards_app - INFO - ============================================================
+2026-02-11 23:01:12 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 23:01:12 - flashcards_app - INFO - ============================================================
+2026-02-11 23:01:15 - flashcards_app - INFO - ============================================================
+2026-02-11 23:01:15 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 23:01:15 - flashcards_app - INFO - ============================================================
+2026-02-11 23:01:18 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 23:01:34 - flashcards_app - INFO - ============================================================
+2026-02-11 23:01:34 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 23:01:34 - flashcards_app - INFO - ============================================================
+2026-02-11 23:01:39 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 23:01:44 - flashcards_app - INFO - ============================================================
+2026-02-11 23:01:44 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 23:01:44 - flashcards_app - INFO - ============================================================
+2026-02-11 23:01:49 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 23:01:50 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 23:01:50 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 23:01:51 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 23:01:51 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 23:01:51 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 23:01:51 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 23:01:51 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 23:01:52 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 23:02:09 - flashcards_app - INFO - ============================================================
+2026-02-11 23:02:09 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 23:02:09 - flashcards_app - INFO - ============================================================
+2026-02-11 23:02:13 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 23:02:44 - flashcards_app - INFO - ============================================================
+2026-02-11 23:02:44 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 23:02:44 - flashcards_app - INFO - ============================================================
+2026-02-11 23:03:04 - flashcards_app - INFO - ============================================================
+2026-02-11 23:03:04 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 23:03:04 - flashcards_app - INFO - ============================================================
+2026-02-11 23:13:37 - flashcards_app - INFO - ============================================================
+2026-02-11 23:13:37 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 23:13:37 - flashcards_app - INFO - ============================================================
+2026-02-11 23:13:39 - flashcards_app - INFO - ============================================================
+2026-02-11 23:13:39 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 23:13:39 - flashcards_app - INFO - ============================================================
+2026-02-11 23:13:45 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 23:32:03 - flashcards_app - INFO - ============================================================
+2026-02-11 23:32:03 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 23:32:03 - flashcards_app - INFO - ============================================================
+2026-02-11 23:32:05 - flashcards_app - INFO - ============================================================
+2026-02-11 23:32:05 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 23:32:05 - flashcards_app - INFO - ============================================================
+2026-02-11 23:32:17 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-11 23:37:37 - flashcards_app - INFO - ============================================================
+2026-02-11 23:37:37 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 23:37:37 - flashcards_app - INFO - ============================================================
+2026-02-11 23:37:42 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 23:37:52 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 23:37:55 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 23:38:04 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 2, Cards: 8
+2026-02-11 23:38:10 - flashcards_app - DEBUG - CARD_RATED - Card ID: 33, Rating: easy
+2026-02-11 23:38:11 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 2, Cards: 7
+2026-02-11 23:40:03 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 23:42:38 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 23:42:38 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 23:42:39 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 23:42:39 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-11 23:47:30 - flashcards_app - INFO - ============================================================
+2026-02-11 23:47:30 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 23:47:30 - flashcards_app - INFO - ============================================================
+2026-02-11 23:47:32 - flashcards_app - INFO - ============================================================
+2026-02-11 23:47:32 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-11 23:47:32 - flashcards_app - INFO - ============================================================
+2026-02-11 23:49:25 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 2, Cards: 7
+2026-02-11 23:49:27 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Create Deck - AI Flashcards{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>Create New Deck</h2>
+</div>
+
+<div class="form-container">
+    <form method="POST" class="form">
+        {% if error %}
+        <div class="alert alert-error">{{ error }}</div>
+        {% endif %}
+
+        <div class="form-group">
+            <label for="deck_name">Deck Name</label>
+            <input type="text" id="deck_name" name="deck_name" placeholder="e.g., Biology Chapter 5" required>
+        </div>
+
+        <div class="form-actions">
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-primary">Create Deck</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

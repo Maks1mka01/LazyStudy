@@ -1,0 +1,472 @@
+2026-02-12 00:03:52 - flashcards_app - INFO - ============================================================
+2026-02-12 00:03:52 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-12 00:03:52 - flashcards_app - INFO - ============================================================
+2026-02-12 00:03:58 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-12 00:04:23 - flashcards_app - INFO - ============================================================
+2026-02-12 00:04:23 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-12 00:04:23 - flashcards_app - INFO - ============================================================
+2026-02-12 00:05:08 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-12 00:05:46 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-12 00:06:26 - flashcards_app - ERROR - Error generating statistics: module 'analytics' has no attribute 'get_numerical_statistics'
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 51, in statistics
+    numerical_stats = analytics.get_numerical_statistics()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'analytics' has no attribute 'get_numerical_statistics'. Did you mean: 'get_deck_statistics'?
+2026-02-12 00:13:27 - flashcards_app - INFO - ============================================================
+2026-02-12 00:13:27 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-12 00:13:27 - flashcards_app - INFO - ============================================================
+2026-02-12 00:14:22 - flashcards_app - INFO - ============================================================
+2026-02-12 00:14:22 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-12 00:14:22 - flashcards_app - INFO - ============================================================
+2026-02-12 00:14:24 - flashcards_app - INFO - ============================================================
+2026-02-12 00:14:24 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-12 00:14:24 - flashcards_app - INFO - ============================================================
+2026-02-12 00:14:25 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-12 00:14:32 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 2, Cards: 7
+2026-02-12 00:14:42 - flashcards_app - DEBUG - CARD_RATED - Card ID: 34, Rating: hard
+2026-02-12 00:14:43 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 2, Cards: 6
+2026-02-12 00:14:51 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-12 00:15:03 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-12 00:17:46 - flashcards_app - INFO - ============================================================
+2026-02-12 00:17:46 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-12 00:17:46 - flashcards_app - INFO - ============================================================
+2026-02-12 00:17:49 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-12 00:17:50 - flashcards_app - ERROR - Error generating statistics: 'numerical_stats' is undefined
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 71, in statistics
+    return render_template('statistics.html',
+                         stats=stats,
+                         charts=charts,
+                         retention_metrics=retention_metrics)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\base.html", line 24, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 83, in block 'content'
+    <td>{{ numerical_stats.ef_mean }}</td>
+    ^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'numerical_stats' is undefined
+2026-02-12 00:17:53 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-12 00:17:53 - flashcards_app - ERROR - Error generating statistics: 'numerical_stats' is undefined
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 71, in statistics
+    return render_template('statistics.html',
+                         stats=stats,
+                         charts=charts,
+                         retention_metrics=retention_metrics)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\base.html", line 24, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 83, in block 'content'
+    <td>{{ numerical_stats.ef_mean }}</td>
+    ^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'numerical_stats' is undefined
+2026-02-12 00:17:57 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-12 00:17:57 - flashcards_app - ERROR - Error generating statistics: 'numerical_stats' is undefined
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 71, in statistics
+    return render_template('statistics.html',
+                         stats=stats,
+                         charts=charts,
+                         retention_metrics=retention_metrics)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\base.html", line 24, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 83, in block 'content'
+    <td>{{ numerical_stats.ef_mean }}</td>
+    ^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'numerical_stats' is undefined
+2026-02-12 00:19:55 - flashcards_app - INFO - ============================================================
+2026-02-12 00:19:55 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-12 00:19:55 - flashcards_app - INFO - ============================================================
+2026-02-12 00:20:02 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-12 00:20:11 - flashcards_app - INFO - ============================================================
+2026-02-12 00:20:11 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-12 00:20:11 - flashcards_app - INFO - ============================================================
+2026-02-12 00:20:12 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-12 00:21:01 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-12 00:21:52 - flashcards_app - ERROR - Error generating statistics: cannot access local variable 'cursor' where it is not associated with a value
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 50, in statistics
+    retention_metrics = analytics.calculate_retention_metrics()
+  File "c:\Users\Admin\Downloads\files (2)(2)\analytics.py", line 216, in calculate_retention_metrics
+    cursor = cursor.execute('SELECT COUNT(*) FROM cards WHERE repetitions >= 1')
+             ^^^^^^
+UnboundLocalError: cannot access local variable 'cursor' where it is not associated with a value
+2026-02-12 09:15:24 - flashcards_app - INFO - ============================================================
+2026-02-12 09:15:24 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-12 09:15:24 - flashcards_app - INFO - ============================================================
+2026-02-12 09:15:26 - flashcards_app - INFO - ============================================================
+2026-02-12 09:15:26 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-12 09:15:26 - flashcards_app - INFO - ============================================================
+2026-02-12 09:15:36 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-12 09:15:36 - flashcards_app - ERROR - Error generating statistics: 'numerical_stats' is undefined
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 71, in statistics
+    return render_template('statistics.html',
+                         stats=stats,
+                         charts=charts,
+                         retention_metrics=retention_metrics)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\base.html", line 24, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 83, in block 'content'
+    <td>{{ numerical_stats.ef_mean }}</td>
+    ^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'numerical_stats' is undefined
+2026-02-12 09:15:43 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-12 09:15:43 - flashcards_app - ERROR - Error generating statistics: 'numerical_stats' is undefined
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 71, in statistics
+    return render_template('statistics.html',
+                         stats=stats,
+                         charts=charts,
+                         retention_metrics=retention_metrics)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\base.html", line 24, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 83, in block 'content'
+    <td>{{ numerical_stats.ef_mean }}</td>
+    ^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'numerical_stats' is undefined
+2026-02-12 09:17:15 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-12 09:17:15 - flashcards_app - ERROR - Error generating statistics: 'numerical_stats' is undefined
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 71, in statistics
+    return render_template('statistics.html',
+                         stats=stats,
+                         charts=charts,
+                         retention_metrics=retention_metrics)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\base.html", line 24, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 83, in block 'content'
+    <td>{{ numerical_stats.ef_mean }}</td>
+    ^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'numerical_stats' is undefined
+2026-02-12 09:18:33 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-12 09:18:33 - flashcards_app - ERROR - Error generating statistics: 'numerical_stats' is undefined
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 71, in statistics
+    return render_template('statistics.html',
+                         stats=stats,
+                         charts=charts,
+                         retention_metrics=retention_metrics)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\base.html", line 24, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 83, in block 'content'
+    <td>{{ numerical_stats.ef_mean }}</td>
+    ^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'numerical_stats' is undefined
+2026-02-12 09:42:01 - flashcards_app - INFO - ============================================================
+2026-02-12 09:42:01 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-12 09:42:01 - flashcards_app - INFO - ============================================================
+2026-02-12 09:42:10 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-12 09:42:10 - flashcards_app - ERROR - Error generating statistics: 'numerical_stats' is undefined
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 71, in statistics
+    return render_template('statistics.html',
+                         stats=stats,
+                         charts=charts,
+                         retention_metrics=retention_metrics)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\base.html", line 24, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 83, in block 'content'
+    <td>{{ numerical_stats.ef_mean }}</td>
+    ^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'numerical_stats' is undefined
+2026-02-12 09:42:15 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-12 09:42:15 - flashcards_app - ERROR - Error generating statistics: 'numerical_stats' is undefined
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 71, in statistics
+    return render_template('statistics.html',
+                         stats=stats,
+                         charts=charts,
+                         retention_metrics=retention_metrics)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\base.html", line 24, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 83, in block 'content'
+    <td>{{ numerical_stats.ef_mean }}</td>
+    ^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'numerical_stats' is undefined
+2026-02-12 09:42:20 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-12 09:42:20 - flashcards_app - ERROR - Error generating statistics: 'numerical_stats' is undefined
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 71, in statistics
+    return render_template('statistics.html',
+                         stats=stats,
+                         charts=charts,
+                         retention_metrics=retention_metrics)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\base.html", line 24, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 83, in block 'content'
+    <td>{{ numerical_stats.ef_mean }}</td>
+    ^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'numerical_stats' is undefined
+2026-02-12 09:42:28 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-12 09:42:28 - flashcards_app - ERROR - Error generating statistics: 'numerical_stats' is undefined
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 71, in statistics
+    return render_template('statistics.html',
+                         stats=stats,
+                         charts=charts,
+                         retention_metrics=retention_metrics)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\base.html", line 24, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 83, in block 'content'
+    <td>{{ numerical_stats.ef_mean }}</td>
+    ^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'numerical_stats' is undefined
+2026-02-12 09:42:49 - flashcards_app - INFO - ============================================================
+2026-02-12 09:42:49 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-12 09:42:49 - flashcards_app - INFO - ============================================================
+2026-02-12 09:45:01 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-12 09:45:01 - flashcards_app - ERROR - Error generating statistics: 'numerical_stats' is undefined
+Traceback (most recent call last):
+  File "c:\Users\Admin\Downloads\files (2)(2)\app.py", line 71, in statistics
+    return render_template('statistics.html',
+                         stats=stats,
+                         charts=charts,
+                         retention_metrics=retention_metrics)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\flask\templating.py", line 131, in _render
+    rv = template.render(context)
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 1295, in render
+    self.environment.handle_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 942, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\base.html", line 24, in top-level template code
+    {% block content %}{% endblock %}
+    ^^^^^^^^^^^^^^^^^
+  File "c:\Users\Admin\Downloads\files (2)(2)\templates\statistics.html", line 83, in block 'content'
+    <td>{{ numerical_stats.ef_mean }}</td>
+    ^^^^^
+  File "C:\Users\Admin\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\jinja2\environment.py", line 490, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'numerical_stats' is undefined
+2026-02-12 09:49:09 - flashcards_app - INFO - ============================================================
+2026-02-12 09:49:09 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-12 09:49:09 - flashcards_app - INFO - ============================================================
+2026-02-12 09:49:14 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 
+2026-02-12 09:49:57 - flashcards_app - INFO - ============================================================
+2026-02-12 09:49:57 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-12 09:49:57 - flashcards_app - INFO - ============================================================
+2026-02-12 14:28:49 - flashcards_app - INFO - ============================================================
+2026-02-12 14:28:49 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-12 14:28:49 - flashcards_app - INFO - ============================================================
+2026-02-12 14:28:53 - flashcards_app - INFO - ============================================================
+2026-02-12 14:28:53 - flashcards_app - INFO - AI Flashcards Application Started
+2026-02-12 14:28:53 - flashcards_app - INFO - ============================================================
+2026-02-12 14:29:01 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 2, Cards: 6
+2026-02-12 14:29:07 - flashcards_app - DEBUG - CARD_RATED - Card ID: 35, Rating: again
+2026-02-12 14:29:07 - flashcards_app - INFO - STUDY_SESSION_STARTED - Deck ID: 2, Cards: 5
+2026-02-12 14:29:10 - flashcards_app - INFO - USER_ACTION - VIEW_STATISTICS 

@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}Home - AI Flashcards{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h2>Welcome to LazyStudy</h2>
+    <p>Study smarter with AI-generated flashcards and spaced repetition</p>
+</div>
+
+<div class="decks-section">
+    <div class="section-header">
+        <h3>Your Decks</h3>
+        <a href="{{ url_for('create_deck') }}" class="btn btn-primary">+ Create New Deck</a>
+    </div>
+
+    {% if decks %}
+        <div class="decks-grid">
+            {% for deck in decks %}
+            <div class="deck-card">
+                <h4>{{ deck['name'] }}</h4>
+                <div class="deck-stats">
+                    <span class="stat">📚 {{ deck['card_count'] }} cards</span>
+                    <span class="stat due">⏰ {{ deck['due_count'] }} due</span>
+                </div>
+                <div class="deck-actions">
+                    <a href="{{ url_for('view_deck', deck_id=deck['id']) }}" class="btn btn-secondary">View</a>
+                    {% if deck['due_count'] > 0 %}
+                        <a href="{{ url_for('study', deck_id=deck['id']) }}" class="btn btn-primary">Study Now</a>
+                    {% else %}
+                        <span class="btn btn-disabled">No cards due</span>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="empty-state">
+            <p>No decks yet. Create your first deck to get started!</p>
+            <a href="{{ url_for('create_deck') }}" class="btn btn-primary">Create Deck</a>
+        </div>
+    {% endif %}
+</div>
+
+<div class="info-section">
+    <h3>How it works</h3>
+    <div class="steps">
+        <div class="step">
+            <span class="step-number">1</span>
+            <h4>Create a Deck</h4>
+            <p>Organize your study materials by topic</p>
+        </div>
+        <div class="step">
+            <span class="step-number">2</span>
+            <h4>Generate Cards</h4>
+            <p>Upload PDFs or paste text, AI creates flashcards</p>
+        </div>
+        <div class="step">
+            <span class="step-number">3</span>
+            <h4>Study Smart</h4>
+            <p>Listen to questions, answer mentally, rate difficulty</p>
+        </div>
+    </div>
+</div>
+{% endblock %}

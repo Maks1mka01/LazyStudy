@@ -1,0 +1,251 @@
+{% extends "base.html" %}
+
+{% block title %}Study - {{ deck['name'] }}{% endblock %}
+
+{% block content %}
+<div class="study-container">
+    {% if no_cards %}
+        <div class="empty-state">
+            <h2>No cards due!</h2>
+            <p>Great job! You're all caught up with this deck.</p>
+            <a href="{{ url_for('view_deck', deck_id=deck['id']) }}" class="btn btn-primary">Back to Deck</a>
+        </div>
+    {% else %}
+        <div class="study-header">
+            <h2>{{ deck['name'] }}</h2>
+            <div class="progress">
+                <span id="cardProgress">Card <span id="currentCard">{{ current }}</span> of <span id="totalCards">{{ total }}</span></span>
+            </div>
+        </div>
+
+        <div id="studyInterface">
+            <div class="card-display">
+                <div class="card-question">
+                    <h3>Question</h3>
+                    <p id="questionText">{{ card['question'] }}</p>
+                </div>
+                <div class="card-answer">
+                    <h3>Answer</h3>
+                    <p id="answerText">{{ card['answer'] }}</p>
+                </div>
+            </div>
+
+            <div class="study-controls">
+                <button id="playBtn" class="btn btn-primary btn-large">▶️ Play Card</button>
+                <button id="pauseBtn" class="btn btn-secondary" style="display: none;">⏸️ Pause</button>
+                <button id="speakAgainBtn" class="btn btn-secondary">🔊 Speak Again</button>
+            </div>
+
+            <div class="rating-section">
+                <h3>Rate your answer</h3>
+                <div class="rating-buttons">
+                    <button class="rating-btn btn-again" onclick="rateCard('again')">
+                        <span class="rating-label">Again</span>
+                        <span class="rating-hotkey">{{ settings['hotkey_again'] }}</span>
+                    </button>
+                    <button class="rating-btn btn-hard" onclick="rateCard('hard')">
+                        <span class="rating-label">Hard</span>
+                        <span class="rating-hotkey">{{ settings['hotkey_hard'] }}</span>
+                    </button>
+                    <button class="rating-btn btn-good" onclick="rateCard('good')">
+                        <span class="rating-label">Good</span>
+                        <span class="rating-hotkey">{{ settings['hotkey_good'] }}</span>
+                    </button>
+                    <button class="rating-btn btn-easy" onclick="rateCard('easy')">
+                        <span class="rating-label">Easy</span>
+                        <span class="rating-hotkey">{{ settings['hotkey_easy'] }}</span>
+                    </button>
+                </div>
+                <p class="rating-hint">Use keyboard shortcuts for faster reviewing!</p>
+            </div>
+
+            <div class="study-actions">
+                <button onclick="endStudy()" class="btn btn-danger">End Session</button>
+            </div>
+        </div>
+
+        <div id="completionMessage" style="display: none;">
+            <div class="completion-state">
+                <h2>🎉 Session Complete!</h2>
+                <p>You've reviewed all due cards in this deck.</p>
+                <a href="{{ url_for('view_deck', deck_id=deck['id']) }}" class="btn btn-primary">Back to Deck</a>
+                <a href="{{ url_for('index') }}" class="btn btn-secondary">Home</a>
+            </div>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let isPaused = false;
+let reloadCheckInterval = null;
+
+// Auto-play first card on load
+window.addEventListener('load', () => {
+    playCard();
+    startReloadChecker();
+});
+
+// ============================================================
+// HOTKEY RELOAD CHECKER - Checks if page should reload
+// ============================================================
+function startReloadChecker() {
+    reloadCheckInterval = setInterval(async () => {
+        try {
+            const response = await fetch('{{ url_for("check_update") }}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            });
+            
+            const data = await response.json();
+            
+            if (data.reload) {
+                console.log('🔄 Hotkey detected - reloading page...');
+                stopReloadChecker();
+                window.location.reload();  // RELOAD THE ENTIRE PAGE
+            }
+        } catch (error) {
+            // Silently ignore errors
+        }
+    }, 300); // Check every 300ms for faster response
+}
+
+function stopReloadChecker() {
+    if (reloadCheckInterval) {
+        clearInterval(reloadCheckInterval);
+        reloadCheckInterval = null;
+    }
+}
+
+async function playCard() {
+    const playBtn = document.getElementById('playBtn');
+    const pauseBtn = document.getElementById('pauseBtn');
+    
+    try {
+        const response = await fetch('{{ url_for("play_card") }}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        
+        if (response.ok) {
+            playBtn.style.display = 'none';
+            pauseBtn.style.display = 'inline-block';
+        }
+    } catch (error) {
+        console.error('Error playing card:', error);
+    }
+}
+
+async function togglePause() {
+    const pauseBtn = document.getElementById('pauseBtn');
+    
+    try {
+        const endpoint = isPaused ? '{{ url_for("resume_playback") }}' : '{{ url_for("pause_playback") }}';
+        const response = await fetch(endpoint, {
+            method: 'POST'
+        });
+        
+        if (response.ok) {
+            isPaused = !isPaused;
+            pauseBtn.textContent = isPaused ? '▶️ Resume' : '⏸️ Pause';
+        }
+    } catch (error) {
+        console.error('Error toggling pause:', error);
+    }
+}
+
+document.getElementById('pauseBtn').addEventListener('click', togglePause);
+
+async function speakAgain() {
+    try {
+        const response = await fetch('{{ url_for("speak_again") }}', {
+            method: 'POST'
+        });
+        
+        if (!response.ok) {
+            console.error('Error speaking again');
+        }
+    } catch (error) {
+        console.error('Error:', error);
+    }
+}
+
+document.getElementById('speakAgainBtn').addEventListener('click', speakAgain);
+
+async function rateCard(rating) {
+    try {
+        const response = await fetch('{{ url_for("rate_card") }}', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ rating: rating })
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+            if (data.session_complete) {
+                stopReloadChecker();
+                showCompletion();
+            } else if (data.next_card) {
+                // Page will reload automatically via button click
+                // Just update the display immediately for button clicks
+                updateCard(data.card, data.current, data.total);
+            }
+        }
+    } catch (error) {
+        console.error('Error rating card:', error);
+    }
+}
+
+function updateCard(card, current, total) {
+    document.getElementById('questionText').textContent = card.question;
+    document.getElementById('answerText').textContent = card.answer;
+    document.getElementById('currentCard').textContent = current;
+    document.getElementById('totalCards').textContent = total;
+    
+    // Reset play button
+    const playBtn = document.getElementById('playBtn');
+    const pauseBtn = document.getElementById('pauseBtn');
+    playBtn.style.display = 'none';
+    pauseBtn.style.display = 'inline-block';
+    pauseBtn.textContent = '⏸️ Pause';
+    isPaused = false;
+    
+    // Auto-play next card after button click
+    setTimeout(() => {
+        playCard();
+    }, 100);
+}
+
+function showCompletion() {
+    document.getElementById('studyInterface').style.display = 'none';
+    document.getElementById('completionMessage').style.display = 'block';
+}
+
+async function endStudy() {
+    if (confirm('Are you sure you want to end this study session?')) {
+        stopReloadChecker();
+        try {
+            await fetch('{{ url_for("end_study") }}', {
+                method: 'POST'
+            });
+            window.location.href = '{{ url_for("view_deck", deck_id=deck["id"]) }}';
+        } catch (error) {
+            console.error('Error ending study:', error);
+        }
+    }
+}
+
+// Clean up when leaving page
+window.addEventListener('beforeunload', () => {
+    stopReloadChecker();
+});
+</script>
+{% endblock %}

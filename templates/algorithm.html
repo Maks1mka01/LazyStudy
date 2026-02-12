@@ -1,0 +1,336 @@
+{% extends "base.html" %}
+
+{% block title %}SM-2 Algorithm - AI Flashcards{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>SM-2 Spaced Repetition Algorithm</h2>
+</div>
+
+<div class="algorithm-section">
+    <div class="algo-card">
+        <h3>What is SM-2?</h3>
+        <p>
+            SuperMemo 2 (SM-2) is a scientifically-proven algorithm that determines the optimal time to review flashcards.
+            It was developed by Piotr Wozniak in 1988 and is used by Anki and many other spaced repetition systems.
+        </p>
+    </div>
+
+    <div class="algo-card">
+        <h3>How It Works</h3>
+        <p>The algorithm uses three key parameters for each card:</p>
+        <ul>
+            <li><strong>Easiness Factor (EF)</strong> - Represents card difficulty (1.3 to 3.0+)</li>
+            <li><strong>Interval (I)</strong> - Days until next review</li>
+            <li><strong>Repetitions (n)</strong> - Number of successful reviews</li>
+        </ul>
+    </div>
+
+    <div class="algo-card">
+        <h3>Rating System</h3>
+        <div class="rating-grid">
+            <div class="rating-item again">
+                <h4>Again (0)</h4>
+                <p>Completely forgot</p>
+                <p class="result">→ Reset to 1 day</p>
+            </div>
+            <div class="rating-item hard">
+                <h4>Hard (1)</h4>
+                <p>Difficult to remember</p>
+                <p class="result">→ Reset to 1 day</p>
+            </div>
+            <div class="rating-item good">
+                <h4>Good (2)</h4>
+                <p>Remembered correctly</p>
+                <p class="result">→ Increase interval</p>
+            </div>
+            <div class="rating-item easy">
+                <h4>Easy (3)</h4>
+                <p>Very easy</p>
+                <p class="result">→ Longer interval (×1.3)</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="algo-card">
+        <h3>Interval Calculation</h3>
+        <pre class="code-block">
+if quality < 2:  # Again (0) or Hard (1)
+    new_interval = 1 day
+    new_repetitions = 0
+    
+else:  # Good (2) or Easy (3)
+    new_repetitions = repetitions + 1
+    
+    if repetitions == 1:
+        new_interval = 1 day
+    elif repetitions == 2:
+        new_interval = 6 days
+    else:
+        new_interval = interval × easiness_factor
+    
+    if quality == 3:  # Easy bonus
+        new_interval = new_interval × 1.3
+        </pre>
+    </div>
+
+    <div class="algo-card">
+        <h3>Easiness Factor Update</h3>
+        <pre class="code-block">
+new_EF = EF + (0.1 - (3 - quality) × (0.08 + (3 - quality) × 0.02))
+
+# Ensure minimum EF of 1.3
+if new_EF < 1.3:
+    new_EF = 1.3
+        </pre>
+        <p class="note">
+            Higher quality ratings increase EF → longer intervals<br>
+            Lower quality ratings decrease EF → shorter intervals
+        </p>
+    </div>
+
+    <div class="algo-card">
+        <h3>Example Progression</h3>
+        <table class="example-table">
+            <thead>
+                <tr>
+                    <th>Review #</th>
+                    <th>Rating</th>
+                    <th>Interval</th>
+                    <th>Next Review</th>
+                    <th>EF</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Good</td>
+                    <td>1 day</td>
+                    <td>Tomorrow</td>
+                    <td>2.5</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Good</td>
+                    <td>6 days</td>
+                    <td>In 6 days</td>
+                    <td>2.6</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Good</td>
+                    <td>15 days</td>
+                    <td>In 2 weeks</td>
+                    <td>2.7</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Easy</td>
+                    <td>49 days</td>
+                    <td>In 7 weeks</td>
+                    <td>2.8</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Hard</td>
+                    <td>1 day</td>
+                    <td>Tomorrow</td>
+                    <td>2.4</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note">Notice how "Hard" on review #5 resets the interval to 1 day but keeps progress in EF</p>
+    </div>
+
+    <div class="algo-card">
+        <h3>Why It Works</h3>
+        <ul>
+            <li><strong>Forgetting Curve</strong> - Reviews happen just before you forget</li>
+            <li><strong>Active Recall</strong> - Testing memory strengthens it more than re-reading</li>
+            <li><strong>Adaptive</strong> - Adjusts to each card's difficulty</li>
+            <li><strong>Efficient</strong> - Focus time on cards you're about to forget</li>
+        </ul>
+    </div>
+
+    <div class="algo-card">
+        <h3>Implementation in This App</h3>
+        <p>File: <code>spaced_repetition.py</code></p>
+        <pre class="code-block">
+def calculate_next_review(quality, easiness_factor, interval, repetitions):
+    # Update easiness factor
+    new_ef = easiness_factor + (0.1 - (3 - quality) * (0.08 + (3 - quality) * 0.02))
+    
+    # Ensure EF stays within bounds
+    if new_ef < 1.3:
+        new_ef = 1.3
+    
+    # Calculate new interval
+    if quality < 2:  # Again or Hard
+        new_repetitions = 0
+        new_interval = 1
+    else:  # Good or Easy
+        new_repetitions = repetitions + 1
+        
+        if new_repetitions == 1:
+            new_interval = 1
+        elif new_repetitions == 2:
+            new_interval = 6
+        else:
+            new_interval = round(interval * new_ef)
+        
+        if quality == 3:  # Easy bonus
+            new_interval = round(new_interval * 1.3)
+    
+    # Calculate next review date
+    next_review = datetime.now() + timedelta(days=new_interval)
+    
+    return (new_ef, new_interval, new_repetitions, next_review)
+        </pre>
+    </div>
+
+    <div class="algo-card">
+        <h3>References</h3>
+        <ul>
+            <li><a href="https://www.supermemo.com/en/archives1990-2015/english/ol/sm2" target="_blank">Original SM-2 Algorithm</a></li>
+            <li><a href="https://faqs.ankiweb.net/what-spaced-repetition-algorithm.html" target="_blank">Anki's Implementation</a></li>
+        </ul>
+    </div>
+</div>
+
+<style>
+.algorithm-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.algo-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.algo-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.algo-card ul {
+    margin-left: 1.5rem;
+    line-height: 1.8;
+}
+
+.rating-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.rating-item {
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    border: 2px solid;
+}
+
+.rating-item.again {
+    border-color: #e74c3c;
+    background: #fee;
+}
+
+.rating-item.hard {
+    border-color: #e67e22;
+    background: #fff3e0;
+}
+
+.rating-item.good {
+    border-color: #27ae60;
+    background: #e8f5e9;
+}
+
+.rating-item.easy {
+    border-color: #3498db;
+    background: #e3f2fd;
+}
+
+.rating-item h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.rating-item .result {
+    font-weight: bold;
+    margin-top: 0.5rem;
+    color: #2c3e50;
+}
+
+.code-block {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 1.5rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.note {
+    background: #fff3cd;
+    padding: 1rem;
+    border-radius: 4px;
+    border-left: 4px solid #ffc107;
+    margin-top: 1rem;
+    font-size: 0.95rem;
+}
+
+.example-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.example-table th,
+.example-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.example-table thead {
+    background: #3498db;
+    color: white;
+}
+
+.example-table tbody tr:nth-child(even) {
+    background: #f8f9fa;
+}
+
+.example-table tbody tr:hover {
+    background: #e3f2fd;
+}
+
+code {
+    background: #f8f9fa;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    color: #e74c3c;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+</style>
+{% endblock %}

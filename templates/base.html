@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}LazyStudy{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo"><a href="{{ url_for('index') }}">LazyStudy</a></h1>
+            <ul class="nav-links">
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('create_deck') }}">New Deck</a></li>
+                <li><a href="{{ url_for('statistics') }}">Statistics</a></li>
+                <li><a href="{{ url_for('algorithm') }}">SM-2 Algorithm</a></li>
+                <li><a href="{{ url_for('settings') }}">Settings</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>AI Flashcards - Spaced Repetition Learning</p>
+    </footer>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>

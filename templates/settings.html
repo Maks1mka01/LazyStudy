@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}Settings - AI Flashcards{% endblock %}
+
+{% block content %}
+<div class="page-header">
+    <h2>Settings</h2>
+</div>
+
+<div class="form-container">
+    <form method="POST" class="form">
+        <h3>API Configuration</h3>
+        
+        <div class="form-group">
+            <label for="api_provider">AI Provider</label>
+            <select id="api_provider" name="api_provider" required>
+                <option value="groq" {% if settings['api_provider'] == 'groq' %}selected{% endif %}>Groq (Fast & Free)</option>
+                <option value="openrouter" {% if settings['api_provider'] == 'openrouter' %}selected{% endif %}>OpenRouter</option>
+                <option value="together" {% if settings['api_provider'] == 'together' %}selected{% endif %}>Together AI</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="api_key">API Key</label>
+            <input type="password" id="api_key" name="api_key" value="{{ settings['api_key'] or '' }}" placeholder="Enter your API key">
+            <small class="form-help">
+                Get free API keys from:
+                <a href="https://console.groq.com" target="_blank">Groq</a> |
+                <a href="https://openrouter.ai" target="_blank">OpenRouter</a> |
+                <a href="https://api.together.xyz" target="_blank">Together AI</a>
+            </small>
+        </div>
+
+        <h3>Hotkey Configuration</h3>
+        <p class="form-help">Configure keyboard shortcuts for rating cards during study sessions.</p>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="hotkey_again">Again</label>
+                <input type="text" id="hotkey_again" name="hotkey_again" value="{{ settings['hotkey_again'] }}" placeholder="e.g., ctrl+1">
+            </div>
+
+            <div class="form-group">
+                <label for="hotkey_hard">Hard</label>
+                <input type="text" id="hotkey_hard" name="hotkey_hard" value="{{ settings['hotkey_hard'] }}" placeholder="e.g., ctrl+2">
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="hotkey_good">Good</label>
+                <input type="text" id="hotkey_good" name="hotkey_good" value="{{ settings['hotkey_good'] }}" placeholder="e.g., ctrl+3">
+            </div>
+
+            <div class="form-group">
+                <label for="hotkey_easy">Easy</label>
+                <input type="text" id="hotkey_easy" name="hotkey_easy" value="{{ settings['hotkey_easy'] }}" placeholder="e.g., ctrl+4">
+            </div>
+        </div>
+
+        <small class="form-help">
+            Hotkey format: Use combinations like "ctrl+1", "alt+a", "shift+f1", etc.
+            Note: Hotkeys may require administrator privileges on some systems.
+        </small>
+
+        <div class="form-actions">
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">Cancel</a>
+            <button type="submit" class="btn btn-primary">Save Settings</button>
+        </div>
+    </form>
+</div>
+
+<div class="info-box">
+    <h3>ℹ️ About API Keys</h3>
+    <p>This application uses AI to generate flashcards from your study material. You need an API key from one of the supported providers:</p>
+    <ul>
+        <li><strong>Groq:</strong> Fast and free tier available. Great for quick flashcard generation.</li>
+        <li><strong>OpenRouter:</strong> Access to multiple AI models with free options.</li>
+        <li><strong>Together AI:</strong> Free tier available with various open-source models.</li>
+    </ul>
+    <p><strong>Privacy:</strong> Your API key and study materials are stored locally on your device only.</p>
+</div>
+{% endblock %}
